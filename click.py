@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver import FirefoxOptions
+import time
 
 
 #options = Options()
@@ -15,4 +16,5 @@ driver.get("https://www.cvedetails.com/vulnerability-list/vendor_id-12752/produc
 element = driver.find_element(By.LINK_TEXT, "Download Results")
 
 element.click()
+time.sleep(5)
 driver.quit()
