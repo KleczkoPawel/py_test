@@ -15,8 +15,8 @@ opts.add_argument("--headless")
 default_download_path = profile['browser.download.dir']
 print(default_download_path) """
 
-profile = webdriver.FirefoxProfile()
-profile.set_preference("browser.download.dir", "/tmp")
+""" profile = webdriver.FirefoxProfile()
+profile.set_preference("browser.download.dir", "/tmp") """
 
 driver = webdriver.Firefox(options=opts, firefox_binary="/home/firefox/firefox-bin")
 driver.get("https://www.cvedetails.com/vulnerability-list/vendor_id-12752/product_id-25450/Mongodb-Mongodb.html")
