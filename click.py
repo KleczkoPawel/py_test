@@ -10,6 +10,10 @@ import time
 opts = FirefoxOptions()
 opts.add_argument("--headless")
 
+profile = webdriver.FirefoxProfile()
+default_download_path = profile['browser.download.dir']
+print(default_download_path)
+
 driver = webdriver.Firefox(options=opts, firefox_binary="/home/firefox/firefox-bin")
 driver.get("https://www.cvedetails.com/vulnerability-list/vendor_id-12752/product_id-25450/Mongodb-Mongodb.html")
 
