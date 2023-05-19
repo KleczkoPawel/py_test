@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver import FirefoxOptions
+
 
 #options = Options()
 #options.binary_location = r"/home/firefox/firefox-bin"
