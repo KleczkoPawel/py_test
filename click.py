@@ -18,7 +18,7 @@ print(default_download_path) """
 profile = webdriver.FirefoxProfile(firefox_profile=profile)
 profile.set_preference("browser.download.dir", "/nowa/lokalizacja")
 profile.set_preference("browser.download.folderList", 2)
-profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "/home")
 
 driver = webdriver.Firefox(options=opts, firefox_binary="/home/firefox/firefox-bin")
 driver.get("https://www.cvedetails.com/vulnerability-list/vendor_id-12752/product_id-25450/Mongodb-Mongodb.html")
