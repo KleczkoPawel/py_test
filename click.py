@@ -1,10 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.firefox.options import Options
 
-firefox_binary = FirefoxBinary()
-driver = webdriver.Firefox(firefox_binary=firefox_binary)
+options = Options()
+options.binary_location = r"/home/firefox/firefox-bin"
+driver = webdriver.Firefox(options=options)
 driver.get("https://www.cvedetails.com/vulnerability-list/vendor_id-12752/product_id-25450/Mongodb-Mongodb.html")
 element = driver.find_element(By.XPATH, '//button[text()="Download Results"]')
 element.click()
