@@ -7,6 +7,7 @@ import time
 
 #options = Options()
 #options.binary_location = r"/home/firefox/firefox-bin"
+#
 opts = FirefoxOptions()
 opts.add_argument("--headless")
 
