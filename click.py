@@ -15,7 +15,7 @@ opts.add_argument("--headless")
 default_download_path = profile['browser.download.dir']
 print(default_download_path) """
 
-profile = webdriver.FirefoxProfile(firefox_profile=profile)
+profile = webdriver.FirefoxProfile()
 profile.set_preference("browser.download.dir", "/home")
 profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
