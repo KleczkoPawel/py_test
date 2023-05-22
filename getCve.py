@@ -12,3 +12,5 @@ response = session.post(
     json={'identifier': username, 'password': password},
     headers={'VERSION': '2'},
 )
+resp = session.get()
+print(resp)
