@@ -3,7 +3,7 @@ from requests.auth import HTTPBasicAuth
 
 apiUrl = "https://www.opencve.io/api/cve"
 params = {
-    "product": "mongodb"
+    "product": "mongodb",
     "cvss": "critical,high"
 }
 username = 'pawel'
