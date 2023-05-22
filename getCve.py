@@ -8,4 +8,4 @@ username = 'pawel'
 password = 'Lexmarkz12'
 
 response = requests.get(apiUrl, auth = HTTPBasicAuth(username, password))
-print(response)
+print(response.json())
