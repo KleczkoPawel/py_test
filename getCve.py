@@ -12,5 +12,5 @@ response = session.post(
     json={'identifier': username, 'password': password},
     headers={'VERSION': '2'},
 )
-resp = session.get()
+resp = session.get(apiUrl)
 print(resp)
