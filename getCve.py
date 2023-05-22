@@ -12,4 +12,3 @@ response = session.post(
     json={'identifier': username, 'password': password},
     headers={'VERSION': '2'},
 )
-response.raise_for_status()  # if not a 2xx response, raise an exception
