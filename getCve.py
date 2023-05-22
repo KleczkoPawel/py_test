@@ -7,5 +7,5 @@ username = 'pawel'
 password = 'Lexmarkz12'
 
 response = requests.get(apiUrl, auth = HTTPBasicAuth(username, password))
-ids = [item["id" for item in response.json()]
+ids = [item["id"] for item in response.json()]
 print(ids)
