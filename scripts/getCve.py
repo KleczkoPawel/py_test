@@ -4,7 +4,7 @@ from requests.auth import HTTPBasicAuth
 import sys
 
 mongoUrl = sys.argv[1]
-urlServerity = sys.argv[2]
+urlServerity = [sys.argv[2]]
 mongodbVersion = sys.argv[3]
 #mongoUrl = "https://www.opencve.io/api/cve?product=mongodb&cvss="
 #postgresqlUrl = "https://www.opencve.io/api/cve?product=postgresql&cvss="
