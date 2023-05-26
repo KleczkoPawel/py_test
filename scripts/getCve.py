@@ -5,9 +5,7 @@ import sys
 
 dbUrl = sys.argv[1]
 dbVersion = sys.argv[2]
-dbHigherVersion = dbVersion.split(".")
-dbHigherVersion[-1] = str(int(dbHigherVersion[-1]) + 1)
-dbHigherVersion = ".".join(dbHigherVersion)
+dbHigherVersion = ".".join(dbVersion.split(".")[:-1]) + "." + str(int(dbVersion.split(".")[-1]) + 1)
 
 def countDatabaseVulnerabilities(url, checkVersion):
     username = 'pawel'
@@ -52,5 +50,3 @@ def countDatabaseVulnerabilities(url, checkVersion):
 
 print("current version ",dbVersion, "vulnerabilities: ", countDatabaseVulnerabilities(dbUrl, dbVersion),
      "\nhigher version ",dbHigherVersion, "vulnerabilities: ", countDatabaseVulnerabilities(dbUrl, dbHigherVersion))
-# To implement:
-# compare with numer of vulnerabilities in higher (minor) version
