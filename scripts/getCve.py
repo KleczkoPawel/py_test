@@ -1,14 +1,18 @@
 import requests
 import json
 from requests.auth import HTTPBasicAuth
+import sys
 
-mongoUrl = "https://www.opencve.io/api/cve?product=mongodb&cvss="
-postgresqlUrl = "https://www.opencve.io/api/cve?product=postgresql&cvss="
+mongoUrl = sys.argv[1]
+urlServerity = sys.argv[2]
+mongodbVersion = sys.argv[3]
+#mongoUrl = "https://www.opencve.io/api/cve?product=mongodb&cvss="
+#postgresqlUrl = "https://www.opencve.io/api/cve?product=postgresql&cvss="
 #mysqlUrl = "https://www.opencve.io/api/cve?product=mysql&cvss="
-mongodbVersion = "5.0.2".split(".")
+#mongodbVersion = "5.0.2".split(".")
 postgresqlVersion = "10.1".split(".")
 #mysqlVersion = "3.3.0".split(".")
-urlServerity = ["high","critical"]
+#urlServerity = ["high","critical"]
 username = 'pawel'
 password = '5ZmZ5GGs9S'
 
