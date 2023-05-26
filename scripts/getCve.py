@@ -52,4 +52,4 @@ def countDatabaseVulnerabilities(url, checkVersion):
 print("current version vulnerabilities: " + countDatabaseVulnerabilities(dbUrl, dbVersion) "\n" +
        "higher version vulnerabilities: " + countDatabaseVulnerabilities(dbUrl, dbHigherVersion))
 # To implement:
-# compare with numer of vulnerabilities in higher minor version
+# compare with numer of vulnerabilities in higher (minor) version
