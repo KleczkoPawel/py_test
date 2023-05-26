@@ -48,5 +48,6 @@ def countDatabaseVulnerabilities(url, serverity, checkVersion):
 
     return numberOfVulnerabilities
 
+print(countDatabaseVulnerabilities(mongoUrl, urlServerity, mongodbVersion))
 # To implement:
 # compare with numer of vulnerabilities in higher minor version
