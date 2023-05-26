@@ -6,7 +6,7 @@ import sys
 dbUrl = sys.argv[1]
 dbVersion = sys.argv[2]
 dbHigherVersion = dbVersion.split(".")
-dbHigherVersion[-1] = int(dbHigherVersion[-1]) + 1
+dbHigherVersion[-1] = str(int(dbHigherVersion[-1]) + 1)
 # dbHigherVersion = ".".join(str(dbHigherVersion))
 print(dbHigherVersion)
 #
