@@ -15,6 +15,7 @@ username = 'pawel'
 password = '5ZmZ5GGs9S'
 
 def countDatabaseVulnerabilities(url, checkVersion):
+    url += "&cvss="
     checkVersion = checkVersion.split(".")
     serverity = ["high","critical"]
     numberOfVulnerabilities = 0
