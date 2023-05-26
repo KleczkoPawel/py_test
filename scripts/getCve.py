@@ -3,7 +3,7 @@ import json
 import sys
 from requests.auth import HTTPBasicAuth
 
-url = sys.argv[1]
+url = sys.argv[1]+"&cvss="
 checkVersion = sys.argv[2]
 username = 'pawel'
 password = '5ZmZ5GGs9S'
