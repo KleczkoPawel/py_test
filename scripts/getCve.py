@@ -3,18 +3,14 @@ import json
 from requests.auth import HTTPBasicAuth
 import sys
 
-mongoUrl = sys.argv[1]
-mongodbVersion = sys.argv[2]
-#mongoUrl = "https://www.opencve.io/api/cve?product=mongodb&cvss="
-#postgresqlUrl = "https://www.opencve.io/api/cve?product=postgresql&cvss="
-#mysqlUrl = "https://www.opencve.io/api/cve?product=mysql&cvss="
-#mongodbVersion = "5.0.2".split(".")
-# postgresqlVersion = "10.1".split(".")
-#mysqlVersion = "3.3.0".split(".")
-username = 'pawel'
-password = '5ZmZ5GGs9S'
+dbUrl = sys.argv[1]
+dbVersion = sys.argv[2]
+dbHigherVersion = dbVersion.split(".")
+dbHigherVersion[-1] = int(dbHigherVersion[-1]) + 1
 
 def countDatabaseVulnerabilities(url, checkVersion):
+    username = 'pawel'
+    password = '5ZmZ5GGs9S'
     url += "&cvss="
     checkVersion = checkVersion.split(".")
     serverity = ["high","critical"]
@@ -53,6 +49,7 @@ def countDatabaseVulnerabilities(url, checkVersion):
 
     return numberOfVulnerabilities
 
-print(countDatabaseVulnerabilities(mongoUrl, mongodbVersion))
+print("current version vulnerabilities: " + countDatabaseVulnerabilities(dbUrl, dbVersion) "\n" +
+       "higher version vulnerabilities: " + countDatabaseVulnerabilities(dbUrl, dbHigherVersion))
 # To implement:
 # compare with numer of vulnerabilities in higher minor version
