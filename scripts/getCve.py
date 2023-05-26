@@ -7,7 +7,7 @@ dbUrl = sys.argv[1]
 dbVersion = sys.argv[2]
 dbHigherVersion = dbVersion.split(".")
 dbHigherVersion[-1] = str(int(dbHigherVersion[-1]) + 1)
-dbHigherVersion = join(dbHigherVersion)
+dbHigherVersion = ".".join(dbHigherVersion)
 print(dbHigherVersion)
 #
 # def countDatabaseVulnerabilities(url, checkVersion):
